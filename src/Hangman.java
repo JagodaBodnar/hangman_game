@@ -43,12 +43,7 @@ public class Hangman {
             lettersUsed.append(letter);
             String[] wordSplit = wordToGuess.split("");
             if (wordToGuess.contains(letter)) {
-                for (int i = 0; i < wordSplit.length; i++) {
-                    if (wordSplit[i].equals(letter)) {
-                        wordTransformed.replace(i, i + 1, letter);
-                    }
-                }
-                System.out.println(wordTransformed);
+               replaceWithLetter(wordSplit, letter);
             } else {
                 mistakes++;
                 System.out.printf("Letter %s is not there. Mistakes: %d%n", letter, mistakes);
@@ -57,6 +52,14 @@ public class Hangman {
             System.out.println("You already used such letter.");
             System.out.println(wordTransformed);
         }
+    }
+    public void replaceWithLetter(String[] wordSplit, String letter){
+        for (int i = 0; i < wordSplit.length; i++) {
+            if (wordSplit[i].equals(letter)) {
+                wordTransformed.replace(i, i + 1, letter);
+            }
+        }
+        System.out.println(wordTransformed);
     }
 
     public void transformWord() {

@@ -13,7 +13,7 @@ public class Game {
         String letter;
         do {
             letter = getLetter();
-            hangmanGame.checkTheWord(letter);
+            hangmanGame.checkTheWord(letter.toLowerCase());
         } while (hangmanGame.getTransformedWord().contains("*") && hangmanGame.getMistakes() < Hangman.MAX_MISTAKES);
         hangmanGame.checkResult();
         hangmanGame.printMenu();

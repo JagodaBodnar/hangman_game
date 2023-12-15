@@ -1,7 +1,7 @@
 ## Exercise1
 ### Instructions
 
->Create console game hangman.
+>Create console game database.
 >User gets the word/sentence to guess. </br>
 >User gives next letters and if any letter is in the word then they get uncovered (the rest stays covered).
 >If the user will give the letter that is not in the word, then the number of mistakes should be increased.

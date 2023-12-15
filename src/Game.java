@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import static database.WordsDatabase.*;
 
 public class Game {
     private static final int NEXT_GAME = 1;
@@ -7,7 +8,7 @@ public class Game {
     private static final Scanner scanner = new Scanner(System.in);
 
     public void startNewGame() {
-        Hangman hangmanGame = new Hangman(WordsDatabase.drawRandomWord());
+        Hangman hangmanGame = new Hangman(drawRandomWord());
         printInformationAboutWord(hangmanGame.getTransformedWord());
         String letter;
         do {

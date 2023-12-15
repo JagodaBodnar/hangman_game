@@ -1,3 +1,5 @@
+package database;
+
 import java.util.Random;
 
 public class WordsDatabase {

@@ -27,7 +27,6 @@ public class Hangman {
 
 
     public void checkResult() {
-        System.out.println(wordTransformed);
         if (!wordTransformed.toString().contains("*")) {
             System.out.println("Congratulations you won!");
         } else {
